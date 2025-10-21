@@ -26,7 +26,7 @@ o_branch <= i_opcode(6) and i_opcode(5) and not i_opcode(4) and not i_opcode(3) 
 
 o_memread <= not i_opcode(6) and not i_opcode(5) and not i_opcode(4) and not i_opcode(3) and not i_opcode(2) and i_opcode(1) and i_opcode(0); -- lw
 
-o_memtoreg <= (not i_opcode(6) and not i_opcode(5) and not i_opcode(4) and not i_opcode(3) and not i_opcode(2) and i_opcode(1) and i_opcode(0)) or (not i_opcode(6) and not i_opcode(5) and i_opcode(4) and not i_opcode(3) and not i_opcode(2) and i_opcode(1) and i_opcode(0)); -- lw
+o_memtoreg <= (not i_opcode(6) and  i_opcode(5) and  i_opcode(4) and not i_opcode(3) and not i_opcode(2) and i_opcode(1) and i_opcode(0)) or (not i_opcode(6) and not i_opcode(5) and i_opcode(4) and not i_opcode(3) and not i_opcode(2) and i_opcode(1) and i_opcode(0)); -- lw
 
 o_alu_op(1) <= (not i_opcode(6) and not i_opcode(5) and i_opcode(4) and not i_opcode(3) and not i_opcode(2) and i_opcode(1) and i_opcode(0)) or (not i_opcode(6) and i_opcode(5) and i_opcode(4) and not i_opcode(3) and not i_opcode(2) and i_opcode(1) and i_opcode(0)); -- imediatos e tipo r
 
